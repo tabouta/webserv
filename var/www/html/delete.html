@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DELETE method</title>
+        <link rel="stylesheet" href="delete.css">
+        <script>
+             function changeImage() {
+                const img = document.getElementById('image');
+                const btn = document.getElementById('btn');
+                if (img.getAttribute('data-state') === 'full') {
+                    img.src = '../media/empty.png';
+                    img.setAttribute('data-state', 'empty')
+                    btn.textContent = 'FILL';
+                    btn.style.backgroundColor = 'green';
+                } else {
+                    img.src = '../media/full.png';
+                    img.setAttribute('data-state', 'full');
+                    btn.textContent = 'DELETE';
+                    btn.style.backgroundColor = '#d9534f';
+                }
+            }
+        </script>
+	</head>
+	<body>
+        <div class="section1">
+		<h2 class="title">THE DELETE METHOD</h2>
+		<br><br>
+		<div class="background"><p class="text">The DELETE method is used to request the removal of a resource from the server. It tells the server to delete the specified data or endpoint. DELETE is typically used in REST APIs to remove items like users, files, or records.</p></div>
+        </div>
+        <div class="box">
+            <button id="btn" onclick="changeImage()">DELETE</button>
+            <img id="image" src="../media/full.png" data-state="full" alt="Imagem" />
+        </div>
+    </body>
+</html>

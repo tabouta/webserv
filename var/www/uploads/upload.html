@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>POST method</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h2 class="title">POST METHOD</h2>
+		<p class="text">The POST method is used to send data to a server to create or update a resource. It submits form data inside the body of the HTTP request, not in the URL. POST is commonly used for uploading files, logging in, or submitting forms securely.</p>
+		<div class="box">
+			<form action="/uploads" method="POST" enctype="multipart/form-data">
+			<input type="file" name="file">
+			<input type="submit" value="Upload">
+			</form>
+		</div>
+	</body>
+</html>
